@@ -120,7 +120,7 @@ function tick() {
             enemies[i].x -= 0.5;
             ctx.fillRect(enemies[i].x, enemies[i].y, 25, 25);
 
-            if ((enemies[i].x <= 0) || (enemies[i].y == you.y && enemies[i].x <= 0)) {
+            if (enemies[i].x <= 0) {
                 endgame();
             }
             if (enemies[i].x <= you.x + 50 && enemies[i].x >= you.x - 25 && enemies[i].y <= you.y + 50 && enemies[i].y >= you.y - 25) {
