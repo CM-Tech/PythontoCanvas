@@ -127,7 +127,7 @@ function tick() {
                 endgame();
             }
             if (shots[0]) {
-                if (enemies[i].y <= shots[0].y + 25 && enemies[i].y >= shots[0].y - 50 && enemies[i].x < shots[0].x + 80) {
+                if (enemies[i].y <= shots[0].y + 25 && enemies[i].y >= shots[0].y - 25 && enemies[i].x < shots[0].x + 80) {
                     console.log("hit");
                     enemies.splice(i, 1);
                     score++;
