@@ -39,42 +39,42 @@ $("body").keydown(function(event) {
             if (event.which == 87) {
                 event.preventDefault();
                 allfalse();
-                up = true;
+                direction.up = true;
             }
             if (event.which == 83) {
                 event.preventDefault();
                 allfalse();
-                down = true;
+                direction.down = true;
             }
             if (event.which == 65) {
                 event.preventDefault();
                 allfalse();
-                left = true;
+                direction.left = true;
             }
             if (event.which == 68) {
                 event.preventDefault();
                 allfalse();
-                right = true;
+                direction.right = true;
             }
             if (event.which == 38) {
                 event.preventDefault();
                 allfalse();
-                up = true;
+                direction.up = true;
             }
             if (event.which == 40) {
                 event.preventDefault();
                 allfalse();
-                down = true;
+                direction.down = true;
             }
             if (event.which == 37) {
                 event.preventDefault();
                 allfalse();
-                left = true;
+                direction.left = true;
             }
             if (event.which == 39) {
                 event.preventDefault();
                 allfalse();
-                right = true;
+                direction.right = true;
             }
         } else {
             if (event.which == 87) {
@@ -141,16 +141,16 @@ function tick() {
     }
 
     if (easy === true) {
-        if (left === true && (you.x > 0)) {
+        if (direction.left === true && (you.x > 0)) {
             you.x -= speed;
         }
-        if (right === true && (you.x < w - 50)) {
+        if (direction.right === true && (you.x < w - 50)) {
             you.x += speed;
         }
-        if (up === true && (you.y > 0)) {
+        if (direction.up === true && (you.y > 0)) {
             you.y -= speed;
         }
-        if (down === true && (you.y < h - 50)) {
+        if (direction.down === true && (you.y < h - 50)) {
             you.y += speed;
         }
     } else {
@@ -237,10 +237,10 @@ function egame() {
 }
 
 function allfalse() {
-    left = false;
-    right = false;
-    up = false;
-    down = false;
+    direction.left = false;
+    direction.right = false;
+    direction.up = false;
+    direction.down = false;
 }
 
 function shoot() {
