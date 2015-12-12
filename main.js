@@ -19,52 +19,39 @@ var you = {
 var xa = 0;
 var ya = 0;
 var time = 0;
-/*var up = false;
-var down = false;
-var left = false;
-var right = false;*/
 var speed = 0.9;
 var score = 0;
 var running = true;
 var timer = setInterval(tick, 0.01);
 $("body").keydown(function(event) {
     if (running === true) {
-        //console.log(event.which);
         if (event.which == 87) {
             event.preventDefault();
-            //allfalse();
             ya -= 0.1;
         }
         if (event.which == 83) {
             event.preventDefault();
-            //allfalse();
             ya += 0.1;
         }
         if (event.which == 65) {
             event.preventDefault();
-            //allfalse();
             xa -= 0.1;
         }
         if (event.which == 68) {
             event.preventDefault();
-            //allfalse();
             xa += 0.1;
         }
-        if (event.which == 38) {
-            //speed += 0.1;
-        }
-        if (event.which == 40 && (speed > 1)) {
-            //speed -= 0.1;
-        }
         if (event.which == 32) {
+            event.preventDefault();
             shoot();
         }
         if (event.which == 16) {
-            console.log("shift");
+            event.preventDefault();
             cenemy();
         }
     }
     if (event.which == 32) {
+        event.preventDefault();
         if (running === false) {
             startgame();
         }
