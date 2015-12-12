@@ -150,6 +150,7 @@ function egame() {
     ctx.textAlign = "center";
     ctx.fillText("Nice Try!", w / 2, h / 2);
     ctx.fillText("Your score was: " + score, w / 2, h / 2 + 30);
+    ctx.fillText("Press space to retry", w / 2, h / 2 + 60);
 }
 
 function allfalse() {
