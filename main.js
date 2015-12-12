@@ -56,6 +56,26 @@ $("body").keydown(function(event) {
                 allfalse();
                 right = true;
             }
+            if (event.which == 38) {
+                event.preventDefault();
+                allfalse();
+                up = true;
+            }
+            if (event.which == 40) {
+                event.preventDefault();
+                allfalse();
+                down = true;
+            }
+            if (event.which == 37) {
+                event.preventDefault();
+                allfalse();
+                left = true;
+            }
+            if (event.which == 39) {
+                event.preventDefault();
+                allfalse();
+                right = true;
+            }
         } else {
             if (event.which == 87) {
                 event.preventDefault();
@@ -70,6 +90,22 @@ $("body").keydown(function(event) {
                 axis.x -= 0.1;
             }
             if (event.which == 68) {
+                event.preventDefault();
+                axis.x += 0.1;
+            }
+            if (event.which == 38) {
+                event.preventDefault();
+                axis.y -= 0.1;
+            }
+            if (event.which == 40) {
+                event.preventDefault();
+                axis.y += 0.1;
+            }
+            if (event.which == 37) {
+                event.preventDefault();
+                axis.x -= 0.1;
+            }
+            if (event.which == 39) {
                 event.preventDefault();
                 axis.x += 0.1;
             }
